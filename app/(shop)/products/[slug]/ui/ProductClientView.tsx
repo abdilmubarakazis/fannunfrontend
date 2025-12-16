@@ -4,7 +4,8 @@ import { useMemo, useState } from "react";
 import type { Product } from "@/lib/types";
 import ProductGallery from "./ProductGallery";
 import VariantPicker from "./VariantPicker";
-import AddToCartPanel, { type SelectedVariant } from "./AddToCartPanel";
+import AddToCartPanel from "./AddToCartPanel";
+import type { SelectedVariant } from "./type";
 import SizeChartModal from "./SizeChartModal";
 
 export default function ProductClientView({ product }: { product: Product }) {

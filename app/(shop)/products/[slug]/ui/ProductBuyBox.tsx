@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from "react";
 import type { Product } from "@/lib/types";
-import AddToCartPanel, { type SelectedVariant } from "./AddToCartPanel";
+import AddToCartPanel from "./AddToCartPanel";
+import type { SelectedVariant } from "./type";
 import VariantPicker from "./VariantPicker";
 import SizeChartModal from "./SizeChartModal";
 

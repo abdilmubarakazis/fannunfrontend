@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { Product } from "@/lib/types";
-import type { SelectedVariant } from "@/app/(shop)/products/[slug]/ui/types"; // sesuaikan kalau beda
+import type { SelectedVariant } from "@/app/(shop)/products/[slug]/ui/type"; // sesuaikan kalau beda
 
 type CartVariant = {
   color?: string | null;

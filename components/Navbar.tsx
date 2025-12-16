@@ -1,17 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/lib/cart.store";
 import { categories } from "@/lib/dummy";
 import { useAuth } from "@/lib/auth.store";
+import { useEffect, useMemo, useState } from "react";
 
 export default function Navbar() {
   const router = useRouter();
 
-  const hydrated = useCart((s) => s.hydrated);
-  const totalQty = useCart((s) => s.totalQty());
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => setHydrated(true), []);
+
+  const totalQty = useCart((s) => s.items.reduce((sum, it) => sum + it.qty, 0));
 
   const authHydrated = useAuth((s) => s.hydrated);
   const user = useAuth((s) => s.user);

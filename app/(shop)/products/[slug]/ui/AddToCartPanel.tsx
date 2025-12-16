@@ -5,7 +5,7 @@ import type { Product } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/lib/cart.store";
 import { toast } from "@/components/Toaster";
-import type { SelectedVariant } from "./types";
+import type { SelectedVariant } from "./type";
 
 export default function AddToCartPanel({
   product,
